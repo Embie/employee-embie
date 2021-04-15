@@ -1,0 +1,28 @@
+<input type="file" (change)="uploadFile($event.target.files)">
+
+<div>
+  <h3>File Content</h3>
+  <pre> {{fileContent}} </pre>
+</div>
+
+<div>
+  <table>
+    <th>EmpID </th>
+    <th>ProjectID </th>
+    <th>DateFrom </th>
+    <th>DateTo</th>
+    <th>Days</th>
+   <tr *ngFor="let employee of employees" class="dataHolder">
+      <td>{{employee.EmpID}}</td>
+      <td>{{employee.ProjectID}}</td>
+      <td>{{employee.DateFrom}}</td>
+      <td>{{employee.DateTo}}</td>
+      <td>{{employee.days}}</td>
+    </tr>
+    
+  </table>
+ 
+</div>
+<div> {{searchEmployee(data)}}</div>
+
+
